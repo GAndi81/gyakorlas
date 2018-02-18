@@ -1,0 +1,28 @@
+#contID {
+    background: rgba(200, 120, 230, .5);
+}
+
+.container {
+    background: rgba(300, 100, 230, .5)
+}
+
+div.container {
+    background: rgba(100, 120, 230, .5);
+}
+
+#contID h1 {
+    color: #0f0;
+}
+
+div h1 {
+    color: #222;
+    background
+}
+
+h1 {
+    color: #ff0;
+}
+
+.container h1 {
+    color: #f0f;
+}

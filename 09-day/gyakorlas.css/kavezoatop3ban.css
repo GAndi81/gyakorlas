@@ -1,0 +1,32 @@
+body {
+    background-color: #532230;
+    border: 10px;
+    padding: 3px;
+}
+
+/*border: enyhe színe legyen és lehet 2px széles is
+    border-radius: ne legyen nagyobb mint 4px
+    font-size: legyen nagyobb a megszokottnál, legalább 16px
+    padding: ne spórolj vele, mobilon jó ha könnyű eltalálni az elemet
+    transition: pl. nem árt egy kis átméretezés, ha fókuszt kap az elem*/
+
+#username {
+    border: 2px #532230;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px;
+    transition: 0ms;
+}
+
+/*
+border: a gyári border csúnya, szabadulj meg tőle minél előbb
+padding: ha nagyobb paddingot adsz neki, feltűnőbb és szebb is lesz
+border-radius: egy kis lekerekítés jól jön, de ne vidd túlzásba
+background: ha megfelelő a háttérszín szép lesz, de a színátmenetet kerüld
+box-shadow: egy kis árnyék jól jön, de akkor egységes legyen az összes gombon
+cursor: egér mozgásra lehetőleg pointer legyen a cursor*/
+
+#submit {
+    opacity: none;
+    padding
+}

@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    background: #f00;
+    /*
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    */
+    padding: 15px, 20px, 0, 10px;
+    /*minden oldalra padding 10px; a sorrend mindig - top, right, bottom, left -*/
+    /*azt is meg lehet csinálni, hogy felső-alsó és jobb-bal értéket vonom külön össze*/
+    /* három értéket is lehet megadni, a két szemközti érték(jobb-bal) ugyanakkora és azt egyszer adom meg*/
+    /* ha a box-sizingot átállítom border-box-ra F12-vel, akkor a szélseeég és magasság értékeket úgys számolja
+    hogy a paddinget és magasságot is tartalmazza már*/
+    /*--------------------------*/
+    border: 3px solid #000;
+    /*ez az összevonása a border-top-width, border-top-style és border-top-colour-nak*/
+    /*border-width, border-style, border-color*/
+    margin: 30px;
+    display: inline-block;
+    /* a többi elemtől való távolság, jelen esetben eltartás a bodytól, szélességet, magasságot nem lehet állítani inline elemnél*/
+    /* a doboz modell blokk szintű elemeknél működik, inline elemeknél nem igazán - ott ne is állítsunk*/
+}

@@ -1,0 +1,20 @@
+h1 {
+    color: #f00;
+    background: #0f0;
+    /* rgb(51, 199, 51), rgb(18, 18, 223));*/
+    /* #af0 */
+    /*color rgba(255, 0, 0, .5)*/
+}
+
+#green-text {
+    color: #0f0;
+}
+
+.purple-text {
+    color: #f0f;
+    font-size: 20px;
+}
+
+.yellow-bg {
+    background: #ff0;
+}

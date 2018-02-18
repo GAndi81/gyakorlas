@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>Gyakorlás</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">		
+		<h1>Felmérés</h1>
+        <p class="desc">Kérjük válassza ki az Önre leginkább jellemző válaszokat</p>
+		<form action="/form-action/survey" class="test-form form-horizontal" role="form">
+			<label for="userEmail">E-mail cím </label>
+          			<!-- userEmail input -->
+			<input type="email" name="userEmail" require>
+          
+            <label for="city">Hol lakik?</label>
+            <!-- city select, options: főváros, megyeszékhely, kisváros, falu -->
+          <select id="city" name="city">
+            <option value="főváros">Főváros</option>
+            <option value="megyeszékhely">Megyeszékhely</option>
+            <option value="kisváros">kisváros</option>
+            <option value="falu">falu</option>
+          </select>
+          
+            <label for="age">Életkora?</label>
+            <!-- age select, options: -18, 18-33, 34-46, 47-60, 61- -->
+			
+          <select id="age" name="age">
+            <option value="-18">-18</option>
+            <option value="18-33">18-33</option>
+            <option value="34-46">34-46</option>
+            <option value="47-60">47-60</option>
+            <option value="61-">61-</option>
+          </select>
+          
+            <label for="buy">Milyen vásárlást tervez a közeljövőben?</label>
+            <!-- buy select, options: TV, HIFI, Mobil, PC -->
+
+          <select id="buy" name="buy">
+            <option value="TV">TV</option>
+            <option value="HIFI">HIFI</option>
+            <option value="Mobil">Mobil</option>
+            <option value="PC">PC</option>
+          </select>
+          
+            <label for="agree">Egyetértek a játék feltételeivel</label>
+            <!-- agree input checkbox, checked -->
+			<input name="agree" id="agree" type="checkbox" checked>
+			<!-- submit form -->
+			<input type="submit" value="jatszom">
+		</form>
+	</div>
+	<!--library-->
+	<script src="main.js"></script>
+	<!--test-->
+</body>
+</html>

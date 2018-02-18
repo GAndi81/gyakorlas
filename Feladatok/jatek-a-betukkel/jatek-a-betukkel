@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Gyakorlás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel panel-primary poen-panel">
+            <div class="panel-heading">...</div>
+            <div class="panel-body"
+
+            >
+                ...
+            </div>
+        </div>
+    </div>
+    <!--library-->
+    <script src="main.js"></script>
+    <!--test-->
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+h1,
+h2,
+h3 {
+    color: #fff;
+    background: #000;
+}
+
+/*p-nél*/
+
+p.purple-color {
+    color: #a0a;
+}
+
+/*h1-nél*/
+
+h1.purple-color {
+    color: #f0f;
+}
+
+div p {
+    background: #afa;
+}
+
+/* közvetlenül!!! a div után van*/
+
+div+p {
+    font-size: 50px;
+}
+
+/* div-en belül csak azokat a p-tegeket formázza,
+amelyek közvetlenül a dive-en belül vannak - gyermek*/
+
+div>p {
+    text-shadow: 5px 5px 3px #000;
+}

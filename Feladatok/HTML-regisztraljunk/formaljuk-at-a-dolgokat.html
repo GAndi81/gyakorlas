@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset=utf-8 />
+	<title>Gyakorlás</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>KGFB kalkulátor</h1>
+		<form action="/calc" class="test-form form-horizontal" role="form">
+			<label for="fullname">Szerződő neve </label>
+			<!-- fullname input -->
+			<input type="text" name="fullname" id="fullname">
+
+			<label for="brand">Márka </label>
+			<!-- brand select, options: audi, opel, toyota, volkswagen, volvo -->
+
+			<select id="brand" name="brand">
+				<option value="audi">audi</option>
+				<option value="opel">opel</option>
+				<option value="toyota">toyota</option>
+				<option value="volkswagen">volkswagen</option>
+				<option value="volvo">volvo</option>
+			</select>
+
+
+			<label for="cm">Hengerűrtartalom (alatt)</label>
+			<!-- cm select, options: 1000, 1500, 2000 -->
+
+			<select id="cm" name="cm">
+				<option value="1000">1000</option>
+				<option value="1500">1500</option>
+				<option value="2000">2000</option>
+			</select>
+
+			<label for="newcar">Új autó </label>
+			<!-- newcar checkbox -->
+			<input name="newcar" id="newcar" type="checkbox" checked>
+			<!-- submit form -->
+			<input type="submit" value="submit">
+
+		</form>
+	</div>
+	<!--library-->
+	<script src="main.js"></script>
+	<!--test-->
+</body>
+
+</html>

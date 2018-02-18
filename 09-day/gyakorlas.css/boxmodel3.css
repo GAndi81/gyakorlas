@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+.container {
+    background-color: #0f0;
+    width: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*pszeudo szelektor: ez olyan, mintha megtoldanánk a végét valamivel - after
+középre helyezést így tudom megcsinálni egyszerűen: position: relative, margin: 0(auto) auto 
+!! fontos: vertikálisan nem tudunk ezzel kzépre igazítani*/
+
+/*floatolt elemeknél, ha a szülő nem floatolt, akkor nehéz lesz vele dolgozni, mert kifolyik a képből*/
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+    /*ezt hívjuk clear-fixnek - egymás mellé helyezi az elemeket, ha nem fér ki, akkor jön a következő sor, 
+    clear: megmondja, hogy az adott elem melleett nem lehet loatolt elem, megszünteti a floatolást*/
+    /* ha nem floatolt szülőbe floatolt elemet teszünk, akkor használjunk clear-fixet*/
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    float: left;
+    /*floatot használjuk egymás mellé igazításra*/
+    position: relative;
+}
+
+.red {
+    background: #f00;
+}
+
+.blue {
+    background: #00f;
+}
+
+.yellow {
+    background: #ff0;
+}
+
+/* EZ akkor kell, ha pl, telefonon akarjuk rendesen olvasni
+mostanában alapból úgy adjuk meg a CSS-t hogy mobilon jól nézzen ki / van még max-width, amit használunk, mást nem
+CSS MQ Examples - w3schools
+ezeket break-pointsnak - töréspontnak hívjuk
+ezeket responsive oldalnak*/
+
+@media (min-width:640px) {
+    .box {
+        width: 33.33%;
+    }
+}

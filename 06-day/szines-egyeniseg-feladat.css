@@ -1,0 +1,58 @@
+/* 1: az összes row osztályú elem. */
+
+.row {
+    margin: 10px;
+}
+
+/* 2: az első row osztályú elem,
+   első col-md-6 osztályú elemének,
+   második gombjának háttérszíne legyen:  
+   vörös 51, zöld 122 és kék 183. */
+
+.row:first-of-type .col-md-6:first-of-type button.btn:nth-child(2) {
+    background-color: rgb(51, 122, 183);
+}
+
+/* 3: az első row osztályú elem,
+   második col-md-6 osztályú elemének,
+   utolsó gombjának kitöltőszíne legyen:  
+   fekete. */
+
+.row:first-of-type .col-md-6:first-of-type button.btn:last-child {
+    color: black;
+}
+
+/* 4: a harmadik row osztályú elemben lévő,
+   első gomb háttérszíne legyen:  
+   zöld 48 és kék 44, vörös 201, 
+   ha fölé viszik az egeret. */
+
+.row:nth-child(3) button:first-of-type:hover {
+    background-color: rgb(48, 44, 201);
+}
+
+/* 5: az összes gomb közül a legutolsónak, 
+   azon belül a kis forgó spinner-nek legyen a kitöltőszíne:  
+   darkblue. */
+
+button.btn:last-of-type .fa-spinner {
+    color: darkblue
+}
+
+/* 6: minden gomb szegélyszíne legyen fekete. */
+
+button.btn {
+    border-color: black;
+}
+
+/* 7: a harmdik row -ban van egy gomb, 
+   aminek a role tulajdonsága 'my-spin'.
+   Ennek legyen:
+   háttérszíne hexadecimálisan megadva ec971f,
+   szegély színe fekete,
+   kitöltő színe világosszürke. */
+
+.row:nth-child(3) button.btn[role='my-spin'] {
+    background-color: #ec971f;
+    border-color: lightgray;
+}

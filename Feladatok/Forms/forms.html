@@ -1,0 +1,54 @@
+ Form (-áljuk át a dolgokat) feladatmegoldás Feladat leírása Az index.html fájlban dolgozz. Pótold a hiányzó input mezőket.
+A kommentek mutatják mi legyen a nevük, tipusuk. Legyen egy küldés gomb az űrlap végén. további segítség Megoldás index.htmlstyle.cssmain.js
+
+<input type="submit"> 1
+<!DOCTYPE html> 2
+<html>
+3
+
+<head>
+    4
+    <meta charset=utf-8 /> 5
+    <title>Gyakorlás</title>
+    6
+    <link rel="stylesheet" href="style.css"> 7
+</head>
+8
+
+<body>
+    9
+    <div class="container">
+        10
+        <h1>Bejelentkezés</h1>
+        11
+        <form action="/calc" class="test-form form-horizontal" role="form">
+            12
+            <label for="userEmail">Email </label>
+            13
+            <!-- userEmail input -->
+            14
+            <input type="email" name="userEmail" require> 15
+            <label for="userPassword">Password </label>
+            16
+            <!-- userPassword input -->
+            17
+            <input type="password" name="userPassword" require> 18
+            <!-- submit form -->
+            19
+            <input type="button" value="ok"> 20
+            <input type="submit"> 21
+        </form>
+        22
+    </div>
+    23
+    <!--library-->
+    24
+    <script src="main.js"></script>
+    25
+    <!--test-->
+    26
+</body>
+27
+
+</html>
+Eredmény Teszt

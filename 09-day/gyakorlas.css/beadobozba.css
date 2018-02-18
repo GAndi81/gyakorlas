@@ -1,0 +1,96 @@
+/* 1. A board osztályú elemen belül a nav-tabs oszályú elem. 
+	- doboz méretezés border-box,  
+	- margó 40px, auto, 0, auto. (külön sorban) 
+*/
+
+.board.nav-tabs {
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+/* 2. A narrow oszályhoz tartozó p elem. 
+      - margó 10px és auto. */
+
+p.narrow {
+    width: 60%;
+    margin: 10px auto;
+}
+
+/* 3. A liner osztályhoz tartozó elemek .
+      - margó 0 és atuo 
+  */
+
+.liner {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    width: 80%;
+    height: 2px;
+    background: #ddd;
+    margin: 0px auto;
+}
+
+/* 4. Három szelektor: 
+      a. nav-tabs osztályú elem közvetlen active osztályú li gyerekének 
+         közvetlen a elemei
+      b. nav-tabs osztályú elem közvetlen active osztályú li gyerekének 
+         közvetlen a elemei ha egér van felettük
+      c. nav-tabs osztályú elem közvetlen active osztályú li gyerekének 
+         közvetlen a elemei ha fókuszt kapnak
+      Szabályok: 
+      - kitöltőszín: hexadecimális 555
+      - szegély: 0 
+  */
+
+.nav-tabs>li.active>a {
+    color: #555555;
+    border: 0;
+}
+
+.nav-tabs>li.active>a:hover {
+    color: #555555;
+    border: 0;
+}
+
+.nav-tabs>li.active>a:focus {
+    color: #555555;
+    border: 0;
+}
+
+/* 5. myTab id-jű elem ami a nav-tabs osztályhoz is tartozik,
+      azon belül a közvetlen gyerek li elemen belüli a elemek.
+      - margó 20px auto (külön sorban)
+      - padding 0
+  */
+
+#nav-tabs.myTab.li :first-child {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border-radius: 100%;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+    padding: 0;
+}
+
+/* 6. btn-outline-rounded osztályhoz tartozó elemek:  
+      - padding 10px és 40px (külön sorban)
+      - margó 20px 0 (külön sorban)
+  */
+
+.btn-outline-rounded {
+    border: 2px solid transparent;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+}

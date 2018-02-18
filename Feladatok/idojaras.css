@@ -1,0 +1,30 @@
+nav>p {
+    color: #fa0;
+    background: #000;
+}
+
+p.purple-color {
+    color: #a0a;
+}
+
+/*h1-nél*/
+
+h1.purple-color {
+    color: #f0f;
+}
+
+div p {
+    background: #afa;
+}
+
+div+p {
+    font-size: 50px;
+}
+
+div>p {
+    text-shadow: 5px 5px 3px #000;
+}
+
+body {
+    background-color: aqua;
+}

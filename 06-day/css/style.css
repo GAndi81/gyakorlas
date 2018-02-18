@@ -1,0 +1,20 @@
+label,
+input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+label:hover {
+    cursor: pointer;
+    color: #9af;
+}
+
+#szamlaosszeg {
+    color: #0d0;
+    font-weight: bold;
+}
+
+#error {
+    color: #f00;
+    font-weight: bold;
+}

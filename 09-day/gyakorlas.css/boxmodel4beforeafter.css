@@ -1,0 +1,11 @@
+li::before {
+    content: "Track:";
+}
+
+li::after {
+    content: "on Album X";
+}
+
+/* before, after selectorok a föntiek - pl. checkboxot tudok ezzel styleolni, checkbox eltüntetés: opacity:0
+ */
+

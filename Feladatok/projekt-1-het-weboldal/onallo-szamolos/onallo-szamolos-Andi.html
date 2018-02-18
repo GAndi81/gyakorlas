@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Szamolos-Andi</title>
+</head>
+
+<body>
+    <div class="onallo-szamolos">
+
+        <h1>Számolj ki</h1>
+
+        <form>
+
+            <form action="/calc" class="test-form form-horizontal" role="form">
+
+                <label for="1-szam">Írj be egy számot</label>
+                <input type="text" name="1-szam" id="1-szam" require>
+
+                <br>
+                <br>
+
+                <label for="muvelet">Válassz műveleti jelet</label>
+                <select id="muvelet" name="muvelet" type="">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+
+                <br>
+                <br>
+
+                <label for="2-szam">Írj be még egy számot</label>
+                <input type="text" name="2-szam" id="2-szam" require>
+
+                <br>
+                <br>
+
+                <label for="button"></label>
+                <input type="button" onclick="calculate()" value="Eredmény" />
+
+            </form>
+    </div>
+
+    <script src="onallo-szamolos-Andi.js"></script>
+
+</body>
+
+</html>

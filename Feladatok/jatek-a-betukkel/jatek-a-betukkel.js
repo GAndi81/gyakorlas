@@ -1,0 +1,9 @@
+var kerdes1 = "Hány kutya tud";
+var kerdes2 = " becsavarni egy villanykörtét?";
+var kerdes = kerdes1.concat(kerdes2);
+var valasz1 = "Ha kialszik a villany eltünnek!";
+var valasz2 = "Nem tudjuk!";
+valasz2 = valasz2.toUpperCase()
+var vicc = kerdes.concat(valasz2, valasz1);
+vicc = vicc.replace('kutya', 'csótány');
+document.querySelector('.panel-body').id = "poen";

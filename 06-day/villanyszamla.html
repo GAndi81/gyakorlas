@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Villanyszamla</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <form action="villanyszanla">
+
+        <label for="ehavi">Villanyóra jelenlegi állása</label>
+        <input type="text" type="text" name="ehavi" id="ehavi" required>
+
+        <label for="elozohavi">Villanyóra előző havi állása</label>
+        <input type="text" type="text" name="elozohavi" id="elozohavi">
+
+        <input type="button" value="Számolj" id="szamolj">
+
+    </form>
+
+    <p id="error"></p>
+    <p id="szamlaosszeg"></p>
+
+    <script src="js/villanyszamla.js"></script>
+
+</body>
+
+</html>

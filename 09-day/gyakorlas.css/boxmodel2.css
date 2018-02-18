@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+}
+
+.red {
+    background: #f00;
+    /*z-index: 2;
+    /*position: relative;
+    /*minden egyes elem z indexxel rendelkezk, meg tudjuk mondani, 
+    hogy mennyire legyen közel a felhasználóhoz -melyik takarja ki egymást. */
+}
+
+.blue {
+    /* static, relative - ezzel csak top-ot és left-et használunk -, absolute, fixed és az eredeti pozícióhoz viszonyít */
+    position: absolute;
+    /*relative:sticky elemeket ezzel tudunk létrehozni, 
+    top, bottom, left, right tulajdonságokat is megadhatjuk a screenhez viszonyít*/
+    /* absolute: a viszonyítási alap mindig a legközelebbi nem statikusan pozicionált szülő! Ezekkel lehet hasznáni: top, bottom, left, right */
+    top: -100px;
+    left: 100px;
+    background: #00f;
+}
+
+.yellow {
+    position: relative;
+    background: #ff0;
+    width: 200px;
+    height: 200px;
+}
