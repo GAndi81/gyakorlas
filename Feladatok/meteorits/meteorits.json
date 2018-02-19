@@ -1,4 +1,4 @@
-var meteorits = {
+var objMeteorits = {
         "fall": "Fell",
         "geolocation": {
             "type": "Point",
