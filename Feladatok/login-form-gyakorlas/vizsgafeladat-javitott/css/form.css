@@ -10,7 +10,6 @@ body {
     height: 500px;
     border: 1px solid #C9D3E2;
     background: repeating-linear-gradient(to bottom right, #759CD5, #12365A)
-    
 }
 
 .login-container {
@@ -38,9 +37,7 @@ p {
     padding: 10px 40px;
 }
 
-.fas fa-user {
-    
-}
+.fas fa-user {}
 
 #password {
     padding: 10px 40px;
@@ -71,4 +68,12 @@ p {
     color: #ffffff;
     text-align: center;
     font-size: 12px;
+}
+
+#error {
+    color: #e61010;
+}
+
+#success {
+    color: #1ae21a;
 }
