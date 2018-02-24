@@ -55,61 +55,67 @@ var users = [{
 
 var userEmailField = document.getElementById('email');
 var passwordField = document.getElementById('password');
-var emptyString = "";
-var loginAttempts = 3;
+var button = document.getElementById('katt');
+var forgot = document.getElementById('forgot');
+var loginAttempts = 0;
 
+var submitEventHandler = function () {
+    var mail = userEmailField.value;
+    var pass = passwordField.value;
 
-var adatBekeres = function () {
-    if (userEmailField && passwordField === emptyString) {
-        var klikk = document.getElementById('katt');
-        klikk.addEventListener('click', function (event) {
-            alert('Meg kell adnod a felhasználóneved és jelszavad.');
-        });
-    } else if (userMail && userPassword !== emptyString) {
-        var klikk = document.getElementById('katt');
-        klikk.addEventListener('click', function (event) {
-            alert('Belépve: ' + usename);
-        });
+    loginAttempts++;
+
+    document.getElementById('error').innerHTML = '';
+
+    if (mail.length === 0 || pass.length === 0) {
+        document.getElementById('error').innerHTML = 'Meg kell adnod a felhasználóneved és jelszavad.';
+    } else {
+        var sikeres = false;
+
+        for (var i = 0; i < users.length; i++) {
+            sikeres = (mail === users[i].email && pass === users[i].password)
+            if (sikeres) {
+                break;
+            }
+        }
+
+        if (sikeres) {
+            document.getElementById('success').innerHTML = 'Belépve: ' + mail;
+        } else {
+            document.getElementById('error').innerHTML = 'Hibás felhasználónév vagy jelszó.';
+
+            if (loginAttempts >= 3) {
+                document.getElementById('error').innerHTML += ' Háromszor is elrontottad az adataidat, 24 órára kitiltottunk';
+            }
+        }
     }
+
 }
-
-console.log(adatBekeres());
-
 
 
 /*
-    userName.addEventListener("input", function (event) {
-        if (userName.validity.typeMismatch) {
-            userName.setCustomValidity("I expect an e-mail, darling!");
-        } else {
-            userName.setCustomValidity("");
-        }
-    });
-
-password.addEventListener("input", function (event) {
-    if (password.validity.typeMismatch) {
-        password.setCustomValidity("I expect an e-mail, darling!");
-    } else {
-        password.setCustomValidity("");
-    }
-});
-
-meg lehet ezt oldani swith case-el???
-
-
 Ha a tömbünkben nincs olyan felhasználó akinek ez lenne a felhasználónév jelszó
 párosa, a login gomb fölé egy# error id - jú span elembe írjuk ki,
-    piros betűszínnel, hogy: Hibás felhasználónév vagy jelszó.
+    piros betűszínnel, hogy: Hibás felhasználónév vagy jelszó.*/
 
+
+/*
 Ha legalább háromszor téves felhasználónév jelszó páros lett megadva,
 akkor a login gomb fölé egy# error id - jú span elembe írjuk ki,
-    piros betűszínnel: HÁromszor is elrontottad az adataidat, 24 órára kitiltottunk.
+    piros betűszínnel: HÁromszor is elrontottad az adataidat, 24 órára kitiltottunk.*/
 
+button.onclick = submitEventHandler;
+
+var forgotEventHandler = function () {
+    var kellaMailcím = prompt('Add meg az email címed.')
+    alert('Az új jelszó el lett küldve a megadott email címre.')
+}
+
+forgot.onclick = forgotEventHandler;
+
+/*
 Amennyiben a user a forgott password - re kattint, ugorjon fel egy prompt,
     amibe bekérjük a felhasználó email címét.
 Miután ezt leokézta, ugorjon fel egy alert azzal a szöveggel, hogy az
 új jelszó el lett küldve az email címére.
-    (Az emailt persze nem kell elküldeni)
-    
-*/
-
+    (Az emailt persze nem kell elküldeni) */

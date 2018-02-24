@@ -19,7 +19,7 @@ var sortData = {
 };
 
 function successAjax(xhttp) {
-    var data = JSON.parse(xhttp.responseText);  
+    var data = JSON.parse(xhttp.responseText);
     createTable(data);
     writeStatistic(data);
 }
@@ -195,4 +195,4 @@ function writeStatistic(data) {
     }
 }
 
-getData('/js/meteorits.json', successAjax);
+getData('meteorits.json', successAjax);

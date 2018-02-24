@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
 </head>
 
 <body>
@@ -19,23 +20,28 @@
     <div class="login">
 
         <div id="camera">
-            <img src="images/camera-blue.png">
+
+            <!--<img src="images/camera-blue.png">-->
+
+            <i class="fa fa-camera"></i>
+
         </div>
 
         <form class="login-container">
 
             <p>
+                <i class="fa fa-user"></i>
                 <input type="email" name="email" id="email" placeholder="username" required>
             </p>
 
             <p>
+                <i class="fa fa-lock"></i>
                 <input type="password" name="password" id="password" placeholder="********" required>
             </p>
 
             <p>
-                <span id="error">Meg kell adnod a felhasználóneved és jelszavad.</span>
-                <span id="success">Belépve: usename</span>
-                <span id="error-id">Hibás felhasználónév vagy jelszó.</span>
+                <span id="error"></span>
+                <span id="success"></span>
                 <input type="button" id="katt" value="LOGIN">
             </p>
 
@@ -44,7 +50,7 @@
                 <input type="checkbox" name="checkbox" id="checkbox" value="" checked>
                 <label for="checkbox" id="szoveg">Remember me</label>
 
-                <p class="forgot" id="forgot">Forgot password?</p>
+                <a href="#" id="forgot">Forgot password?</a>
 
             </div>
 
