@@ -12,9 +12,127 @@
 
 
     <script>
-    
-    
-    
+        /*
+                                                                                                                                                                                                                                                                                                                var obj = {
+                                                                                                                                                                                                                                                                                                                    firstname: 'Gáll',
+                                                                                                                                                                                                                                                                                                                    lastname: 'Gergely',
+                                                                                                                                                                                                                                                                                                                    languages: ['magyar', 'olasz', 'német'],
+                                                                                                                                                                                                                                                                                                                    sayMyName: function () {
+                                                                                                                                                                                                                                                                                                                        console.log(`Ez a teljes nevem:' ${this.firstname} ${this.lastname}`);
+                                                                                                                                                                                                                                                                                                                    },
+                                                                                                                                                                                                                                                                                                                    spokenLanguages: function () {
+                                                                                                                                                                                                                                                                                                                        console.log(this.languages.join(','));
+                                                                                                                                                                                                                                                                                                                    },
+                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                console.log(obj.firstname)
+                                                                                                                                                                                                                                                                                                                console.log(obj.lastname)
+                                                                                                                                                                                                                                                                                                                console.log(obj['firstname']);
+                                                                                                                                                                                                                                                                                                                console.log(obj['lastname']);
+                                                                                                                                                                                                                                                                                                                console.log(obj.languages[0]);
+
+                                                                                                                                                                                                                                                                                                                obj.sayMyName(); // Ez az objektum propertyje, ami egy függvény, ezt hívjuk úgy, hogy metódus.
+                                                                                                                                                                                                                                                                                                                obj.spokenLanguages();*/
+
+
+        /*
+
+                var auto = {
+                    tulajdonos: 'Geza',
+                    evjarat: '2010',
+                    vegsebesseg: '300',
+                    gyorsulas: '20'
+                }
+                gyorsulasiIdo: function () {
+                    alert(`A végsebességet ennyi ido alatt eri el:`
+                        $ {
+                            this.gyorsulas
+                        }
+                        `);
+                },
+
+                hanyEvesaKocsi: function() {
+                    alert(`
+                        A gepjarmu ennyi idős: ` ${this.evjarat}`);
+
+                }
+
+                alert(auto.gyorsulas);
+                alert(auto.evjarat);
+
+
+                obj.gyorsulasiIdo();
+                obj.hanyEvesaKocsi();
+
+                */
+
+        // ha viselkedésre van szükség - metódust használunk -
+        // egy egyszerű property egy egyszerűen számszerűsíthető érték
+        // a this a függvényen belül használva a benti részekre vonatkozik, globálisan meghívva a Window-ra
+        // példányosítás de nem azt jelenti mint a neve - oop nyelvekből jön, new array - objektumból objektum
+
+        // objektum literál: var obj = {};
+        // beépített objektum konstruktor: var obj2 = new Object();
+        // var str = new String('asas');
+        /*
+                var a = new String('alma'); // konstruktor függvény a neve ennek, az objektum létrehozásakor(inicializáláskor) automatikusan lefut
+                console.log(typeof a);
+
+                var b = a;
+                b += 'asasasas';
+                console.log(a);
+
+                var aTomb = [0, 1, 2];
+                var bTomb = aTomb;
+                bTomb[0] = 'WTF';
+                console.log(aTomb);
+
+                /*var b = a;
+                b = new String('a'); // EZt el lehet képzelni, mint egy új tömböt, indexelve vannak az elemei
+                console.log(a);
+                /*
+                        var c = 'Hello';
+                        c[0] = 'H';
+                        console.log(c);
+
+                        */
+
+        //var a = newString();
+        //var b = "replaced";
+        //console.log(a);
+
+        // a primitívek érték szerint kerülnek átadásra ----- referenciaérték szerint ker (memóriában ráhivatkozik)
+
+        //beépített pbjektum konstruktor:
+        /*
+                var objLiteral = {
+                        name: 'Kiss Gizi',
+                        age: 14,
+                        childNumber: 0,
+                        sayMyName: function () {
+                            console.log('My name is' + this.name);
+                        }
+                    },*/
+        /*
+                    var newObj = new Object({// beépített konstruktor
+                            name: 'Kiss Gizi',
+                            age: 14,
+                            childNumber: 0,
+                            sayMyName: function () {
+                                console.log('My name is' + this.name);
+                            }
+                        }),
+
+                        console.log(objLiteral);
+                console.log(newObj);
+                */
+        //objektkonstruktorral saját objektum létrehozása
+
+        function objCOnstructor(nameValue) {
+            this.name = nameValue;
+        };
+        var customObj = new objCOnstructor('Etelka');
+        console.log(customObj);
     </script>
 </body>
 
