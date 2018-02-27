@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+
+    <link rel="stylesheet" href=".vscode/gyak.css">
+</head>
+
+<body>
+
+    <div id='div'>
+        <p class="myTag">
+            <span class="helloClass">hello</span>
+            <span class="belloClass">bello</span>
+            <span class="bananaClass">Banana</span>
+        </p>
+    </div>
+
+    <!--
+    <a href="http://index.hu">Origo</a>
+
+
+    <a href="http://origo.hu">Links</a>
+
+
+
+    <a href="http://google.hu">Google</a>-->
+
+    <script>
+        for (var i = 0; i < 10; i++) {
+            var el = document.createElement('p');
+            el.textContent = 'Click';
+            var para = 'megadott parameter' + i;
+
+            function (para) {
+                el.addEventListener('click',
+                    function () {
+                        console.log(para);
+                    });
+
+                //focus, amikor egy input mező kijelölésre kerül
+                //blour - amikor elveszti a mező a fókuszt
+                //load - fontos szintén
+                //document.body.insertBefore(el, document.body.firstChild);
+                document.body.appendChild(el, document.body.firstChild);
+            }
+
+            /*
+
+            (function () {
+                var an = 'anonim';
+                console.log(an, 'IIFE');
+            })();
+            */
+
+            /*
+            var divElement = document.getElementById('div');
+            console.log(divElement.attributes); //kiírja az adott elem attribut node-jait
+            console.log(divElement.childNodes); // a textnode-okat is számolni fogja, ami egy sortörés, ha a childrent használom, nem kapom vissza a nodelistet
+            console.log(divElement.children[0].children[0].attributes.class); // a textnode-okat is számolni fogja, ami egy sortörés, ha a childrent használom, nem kapom vissza a nodelistet
+            // HTML Collection - ezeknek
+            /*
+                                                    for (var i = 0; i < document.links.length; i++) {
+                                                        (document.links[i].style.color = 'green');
+                                                    }
+
+                                                    var el = document.links[0];
+                                                    el.childNodes[0].nodeValue = 'Hello';
+
+                                                    console.log(el.childNodes);
+
+                                                    //console.log(el.attributes);
+                                                    //console.log(el.childNodes[0].node = 'hello');
+
+
+
+                                                    //text contentnél csak a szöveges node-ot választja meg, a node value közöt nincs különbség
+
+                                                    // a proto-val fogunk foglalkozni
+
+                                                    /*
+                                                    console.log(document.anchors.length);
+                                                    console.log(document.links.length);
+
+                                                    /*
+                                                    for (var i = 0; i < 10; i++) {
+                                                        var element = document.createElement('');
+                                                    }*/
+
+            // document segítségével milyen elemeket tudunk elérni
+            //W3 schools - DOM Elements - 
+
+            //tömböket
+    </script>
+
+</body>
+
+</html>
