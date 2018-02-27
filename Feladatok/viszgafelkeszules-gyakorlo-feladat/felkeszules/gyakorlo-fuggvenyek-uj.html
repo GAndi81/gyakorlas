@@ -12,17 +12,59 @@
 
 
     <script>
-        function heavyStuff(a, b) {
-            var c = a + b; //itt undefinedet adunk vissza
-            return c;
+        /*function heavyStuff(a, b) {
+                                                                                                                                                                                                                                                            var c = a + b; //itt undefinedet adunk vissza
+                                                                                                                                                                                                                                                            return c;
+                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                        var vissza = heavyStuff(10, 20);
+
+                                                                                                                                                                                                                                                        console.log(heavyStuff(10, 20));*/
+
+
+        function szoroz(a, b) {
+            return a * b;
         }
 
-        var vissza = 
+        function osszead(a, b) {
+            return a + b;
+        }
 
+        function callbackStuff(a, b, multipFunc, addFunct) {
+            return multipFunc(a, b) - addFunct(a, b);
+        }
+
+        console.log(callbackStuff(10, 5, szoroz, osszead)); //Callback, ami függvényekkel dolgozik, paraméterként megkapja őket
+        // addeventlistener is callbackkel dolgozik
+
+        // closure - zárvány
+
+        /*function closureSample() {
+            var a = 0;
+            a++
+            console.log(a);
+        }
+
+        closureSample();
+        closureSample();
+        console.log(a);//ezt  afüggvényen kívül nm érem el, reference error lesz
+
+        // ha kívülről szeretném ezt elérni*/
+
+        function closureSample() {
+            var a = 0;
+            return function () {
+                a++; // nested scope - ha nem talál itt változót, akkor megy eggyel feljebb
+                // mivel használom ezt a kinti változót, ezért megakadályozom, hogy garbage kollektorba kerüljön,
+                // vagyis még a függvény lefutása után is elérhető a lokális változó
+                // egy olyan függvény, ami egy másik függvény viszatérési értéke
+                console.log(a)
+            }
+        }
+
+        var vissza = closureSample();
+        console.log(vissza());
         
-        console.log(heavyStuff(10, 20));
-
-
     </script>
 
 </body>
