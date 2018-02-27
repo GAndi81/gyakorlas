@@ -30,71 +30,130 @@
 
     <a href="http://google.hu">Google</a>-->
 
+
     <script>
-        for (var i = 0; i < 10; i++) {
+        /*
+                                                                                                var a = 10;
+
+                                                                                                function myFirstFunction() {
+                                                                                                    var a = 11;
+                                                                                                    alert('Meghívott függvény' + a); // Ide lehetne az alert elé window-t is írni, de nem kell
+                                                                                                }*/
+
+        // Függvény paraméter:
+
+        var a = 10; // ide tehetnék egy harmadik paramétert is - ez itt egy higher-order function, mert függvénnyel dolgozik
+        function myFirstFunction(para1, para2) {
+            a = 11;
+            console.log(arguments); //Arguments az nem tömb!!!! CSak tömbszerű objektum
+            alert('Meghívott függvény' + para1 + para2);
+        }
+
+        myFirstFunction([0, 2, 3] { // itt lehetne egy függvény is paraméter - callback
+            red,
+            yellow,
+            blue
+        });
+
+        // ha nem adok meg semmit a függvény meghívásnál, akkor :
+        // tömböket is tudunk összefűzni concattel
+        /*
+        function myFirstFunction(para1 = 0, para2) { - az alapértelmezett értékek akkor érvényesülnek, ha a függvényhívásnál nem adunk meg semmit
+                    a = 11;
+                    console.log(arguments); //Arguments az nem tömb!!!! CSak tömbszerű objektum
+                    alert('Meghívott függvény' + para1 + para2);*/
+
+
+        // Függvények meghívása: - Ezzel lehet megoldani, a feladatot is.
+
+        // Függvény deklarációval:
+
+        /*function createContent(i) {
             var el = document.createElement('p');
             el.textContent = 'Click';
-            var para = 'megadott parameter' + i;
+            el.addEventListener('click', function () {
+                console.log(i);
+            });
 
-            function (para) {
-                el.addEventListener('click',
-                    function () {
-                        console.log(para);
-                    });
+            document.body.appendChild(el);
 
-                //focus, amikor egy input mező kijelölésre kerül
-                //blour - amikor elveszti a mező a fókuszt
-                //load - fontos szintén
-                //document.body.insertBefore(el, document.body.firstChild);
-                document.body.appendChild(el, document.body.firstChild);
-            }
+        }
 
-            /*
+        for (var i = 0; i < 10; i++) {
+            createContent(i);
+        }*/
 
-            (function () {
-                var an = 'anonim';
-                console.log(an, 'IIFE');
-            })();
-            */
+        // Function expressionnel - a függvény egy first class típusú objektum ezért tudjuk így leírni:
 
-            /*
-            var divElement = document.getElementById('div');
-            console.log(divElement.attributes); //kiírja az adott elem attribut node-jait
-            console.log(divElement.childNodes); // a textnode-okat is számolni fogja, ami egy sortörés, ha a childrent használom, nem kapom vissza a nodelistet
-            console.log(divElement.children[0].children[0].attributes.class); // a textnode-okat is számolni fogja, ami egy sortörés, ha a childrent használom, nem kapom vissza a nodelistet
-            // HTML Collection - ezeknek
-            /*
-                                                    for (var i = 0; i < document.links.length; i++) {
-                                                        (document.links[i].style.color = 'green');
-                                                    }
+        /*var createContent = function (i) {
+            var el = document.createElement('p');
+            el.textContent = 'Click';
+            el.addEventListener('click', function () {
+                console.log(i);
+            });
+            document.body.appendChild(el);
+        }*/
 
-                                                    var el = document.links[0];
-                                                    el.childNodes[0].nodeValue = 'Hello';
+        // EZt így megcsinálhatom - ez is function xpression - speciáis, mert azonnal meghívódik!
+        // Mivel paraméterrel dolgozunk , ezért ez nem probléma, hgy azonnal meghívódik.
 
-                                                    console.log(el.childNodes);
+        for (var i = 0; i < 10; i++) {
+            (function (i) {
+                var el = document.createElement('p');
+                el.textContent = 'Click';
+                el.addEventListener('click', function () {
+                    console.log(i);
+                });
+                document.body.appendChild(el);
 
-                                                    //console.log(el.attributes);
-                                                    //console.log(el.childNodes[0].node = 'hello');
+            })(i);
+        }
+        /*
+
+        (function () {
+            var an = 'anonim';
+            console.log(an, 'IIFE');
+        })();
+        */
+
+        /*
+        var divElement = document.getElementById('div');
+        console.log(divElement.attributes); //kiírja az adott elem attribut node-jait
+        console.log(divElement.childNodes); // a textnode-okat is számolni fogja, ami egy sortörés, ha a childrent használom, nem kapom vissza a nodelistet
+        console.log(divElement.children[0].children[0].attributes.class); // a textnode-okat is számolni fogja, ami egy sortörés, ha a childrent használom, nem kapom vissza a nodelistet
+        // HTML Collection - ezeknek
+        /*
+                                                for (var i = 0; i < document.links.length; i++) {
+                                                    (document.links[i].style.color = 'green');
+                                                }
+
+                                                var el = document.links[0];
+                                                el.childNodes[0].nodeValue = 'Hello';
+
+                                                console.log(el.childNodes);
+
+                                                //console.log(el.attributes);
+                                                //console.log(el.childNodes[0].node = 'hello');
 
 
 
-                                                    //text contentnél csak a szöveges node-ot választja meg, a node value közöt nincs különbség
+                                                //text contentnél csak a szöveges node-ot választja meg, a node value közöt nincs különbség
 
-                                                    // a proto-val fogunk foglalkozni
+                                                // a proto-val fogunk foglalkozni
 
-                                                    /*
-                                                    console.log(document.anchors.length);
-                                                    console.log(document.links.length);
+                                                /*
+                                                console.log(document.anchors.length);
+                                                console.log(document.links.length);
 
-                                                    /*
-                                                    for (var i = 0; i < 10; i++) {
-                                                        var element = document.createElement('');
-                                                    }*/
+                                                /*
+                                                for (var i = 0; i < 10; i++) {
+                                                    var element = document.createElement('');
+                                                }*/
 
-            // document segítségével milyen elemeket tudunk elérni
-            //W3 schools - DOM Elements - 
+        // document segítségével milyen elemeket tudunk elérni
+        //W3 schools - DOM Elements - 
 
-            //tömböket
+        //tömböket
     </script>
 
 </body>
