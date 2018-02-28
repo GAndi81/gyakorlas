@@ -10,7 +10,91 @@
 
 <body>
 
-    
+    <script>
+        function Homo(sizeofSCulpture, liveFrom, liveTo) {
+            this.age = 'őskor';
+            this.sizeofSCulpture = sizeofSCulpture;
+            this.liveFrom = liveFrom;
+            this.liveTo = liveTo;
+        }
+
+        function HomoSapiens() {
+            this.name = 'Homo sapiens';
+            this.population = 2000;
+        }
+
+        function Person() {
+            this.name = 'homo sapiens sapiens';
+        }
+
+        //Prototype felülírása
+        HomoSapiens.prototype = new Homo();
+        HomoSapiens.prototype.constructor = Homo;
+
+        Person.prototype = new HomoSapiens();
+        Person.prototype.constructor = HomoSapiens;
+
+        var articPerson = new Person();
+        console.log(articPerson.population); // 2000
+
+
+        console.log(articPerson.age); // 
+
+        HomoSapiens.prototype.age = 'kőkor';
+
+        Homo.prototype.getAge = function () {
+            return `${this.age} says ${this.population}`;
+        };
+
+        console.log(articPerson.getAge()); //
+        console.log(articPerson);
+
+        /*
+
+                function Jarmuvek() {
+                    this.name = 'auto';
+                    this.colour = 'blue';
+                    this.fuel = 'diesel';
+
+                    this.toString = function () {
+                        return `Ez egy jarmu: ${this.name}`;
+                    };
+                }
+
+                function szarazfoldiJarmu() {
+                    this.kerekszam = 6;
+                    this.name = 'Ford';
+                }
+
+                function szemelygepkocsi() {
+                    this.porpName = 'Kalmár András';
+                    this.type = 'Focus'
+                }
+
+                //Prototype felülírása
+                Jarmuvek.prototype = new Jarmuvek();
+                Jarmuvek.prototype.constructor = Jarmuvek;
+
+                szarazfoldiJarmu.prototype = new szarazfoldiJarmu();
+                szarazfoldiJarmu.prototype.constructor = szemelygepkocsi;
+
+                var Suzukiszemelygepkocsi = new szemelygepkocsi();
+                console.log(Suzukiszemelygepkocsi.fuel);
+
+                Jarmuvek.prototype.colour = 'red';
+                Jarmuvek.prototype.getColour = function () {
+                    return `${this.colour} says ${this.fuel}`;
+                };
+
+                console.log(Suzukiszemelygepkocsi.getColour());
+                console.log(Suzukiszemelygepkocsi);
+                */
+
+
+                /*
+    </script>
+
+
 </body>
 
 </html>
