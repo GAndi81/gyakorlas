@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get-set</title>
+</head>
+
+<body>
+
+    <script>
+        //getter-setter metódusok - itt nem hívom meg a függvényt - értéket adok át neki - nem nagyon használjuk
+        //adatelrejtésnél használjuk ezeket, metódusokon keresztül
+        var Person = {
+            name: 'Matyas kiraly', // nem lehet a name és a getName ugyanaz , mert hibát apok
+            get getName() { // ha ragaszkodunk hozzá, akkor !!!name = _name és getName = name!!!! - privát változónak hívnánk, de hivatalosan nincs
+                return this.name; // megoldható a használata - 
+            },
+            set setName(name) {
+                this.name = name;
+            }
+        };
+
+        Person.setName = 'András király';
+        console.log(Person);
+        Person.name = 'Nincs is királyság';
+        console.log(Person);
+    </script>
+</body>
+
+</html>

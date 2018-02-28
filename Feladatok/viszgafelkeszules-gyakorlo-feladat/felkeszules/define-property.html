@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Define-protperty</title>
+</head>
+
+<body>
+
+    <script>
+        //konsctruktor függvény
+        function Point() {
+            this.x = 0;
+            this.y = 0;
+
+        }
+
+        //
+        Object.defineProperty(Point.prototype, 'pointPos', {
+            // a descriptorokat tudjuk megadni ezen belül - configurable, enumerable, value, writable
+            get: function () {
+                return `X: ${this.x} Y: ${this.y}`;
+            },
+            set: function (pts) {
+                var parts = pts.toString().split(',');
+                this.x = parts[0] || '';
+                this.y = parts[1] || '';
+            }
+        });
+
+        var pt = new Point();
+        pt.pointPos = '10,20';
+        console.log(pt.pointPos);
+    </script>
+</body>
+
+</html>

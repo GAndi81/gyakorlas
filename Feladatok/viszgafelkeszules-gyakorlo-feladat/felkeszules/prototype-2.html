@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prototype</title>
+</head>
+
+<body>
+
+    <script>
+        function Person(first, last, age) {
+
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+        }
+
+        Person.prototype.getName = function () {
+            return this.firstName + '' + this.lastName;
+        }
+
+        Person.prototype.setName = function (name) {
+            this.firstName = name.split('')[1];
+            this.lastName = name.split('')[0];
+
+        }
+
+        var person1 = new Person('Péter', 'Nagy', 40);
+        var person2 = new Person('Anna', 'Kiss', 20);
+
+
+        person1.setName('Példa Béla');
+        console.log(person1);
+        console.log(person2);
+    </script>
+</body>
+
+</html>

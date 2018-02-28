@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>For-in</title>
+</head>
+
+<body>
+
+    <script>
+        function Person(firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.getName = function () { // ez a metódusa , egy proerty
+                console.log('Az én nevem: ' + this.firstName + ' ' + this.lastName);
+            };
+
+            this.setName = function (name) { // ez is metódus, de kap 2 paramétert
+                this.firstname = name.split('')[1];
+                this.lastname = name.split('')[0];
+            }
+        };
+
+        // for in ciklus
+
+        var peti = new Person('Péter', 'Szarka', 18);
+
+        /*
+        for (var i in peti) {
+            console.log(i + ': ' + peti[i]);
+            */
+        for (var i in Object.keys(peti)) {
+            console.log(this.Object.keys.peti);
+        }
+
+        console.log(Object.keys(peti));
+    </script>
+</body>
+
+</html>
