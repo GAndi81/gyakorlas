@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Try-catch-finally</title>
+</head>
+
+<body>
+
+    <script>
+        // kivételkezelés - exception handling
+        function test(param) {
+            try {
+
+                //ide írjuk azt a kódot, ide hívjuk meg azokat a függvényeket stb....
+                // ahol hiba elképzelhető, amit majd le akarok kezelni
+                var jsonContent = JSON.parse(param);
+            } catch (e) {
+                // itt kezeljük le a hibát
+                console.log(e);
+            } finally {
+                // ez nem kötelező ez a rész, ide írjuk le azt a függvényt, ami akkor is lefut, ha van hiba, ha nincs
+                console.log('Ez mindig lefut, ha van hiba, ha nincs');
+            }
+        }
+
+        test('szöeg');
+    </script>
+</body>
+
+</html>
