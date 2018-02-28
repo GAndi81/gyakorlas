@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ObConstructor-fuggveny</title>
+</head>
+
+<body>
+
+    <script>
+        // a this - az obektumon belül hívódik meg
+        //
+        //példa az obektum literálos módszerre:
+
+        /* var person1 = {
+             firstName: 'Peter',
+             lastName: 'Szarka',
+             age: 18,
+             getName: function () { // ez a metódusa , egy proerty
+                 console.log('Az én nevem: ' + this.firstName + ' ' + this.lastName);
+             },
+
+             setName: function () { // ez is metódus, de kap 2 paramétert
+                 this.firstname = name.split('')[1];
+                 this.lastname = name.split('')[0];
+             }
+         }
+
+         var person2 = {
+             firstName: 'Oliver',
+             lastName: 'Kovats',
+             age: 27,
+             getName: function () { // ez a metódusa , egy proerty
+                 console.log('Az én nevem: ' + this.firstName + ' ' + this.lastName);
+             },
+
+             setName: function () { // ez is metódus, de kap 2 paramétert
+                 this.firstname = name.split('')[1];
+                 this.lastname = name.split('')[0];
+             }
+         }
+
+         console.log(person1);
+         console.log(person2);
+
+         /*
+         person1.setName('Kiss Gizike');
+         person1.getName();
+         */
+
+        // példa a new kulcsszóval létrehozásra
+
+        /*var person3 = new Object({
+            firstName: 'Oliver',
+            lastName: 'Kovats',
+            age: 27,
+            getName: function () { // ez a metódusa , egy proerty
+                console.log('Az én nevem: ' + this.firstName + ' ' + this.lastName);
+            },
+
+            setName: function () { // ez is metódus, de kap 2 paramétert
+                this.firstname = name.split('')[1];
+                this.lastname = name.split('')[0];
+            }
+        });
+
+        var person4 = new Object({
+            firstName: 'Oliver',
+            lastName: 'Kovats',
+            age: 27,
+            getName: function () { // ez a metódusa , egy proerty
+                console.log('Az én nevem: ' + this.firstName + ' ' + this.lastName);
+            },
+
+            setName: function () { // ez is metódus, de kap 2 paramétert
+                this.firstname = name.split('')[1];
+                this.lastname = name.split('')[0];
+            }
+        });
+
+        console.log(person3);
+        console.log(person4);
+
+        // Példa a konstruktor függénnyel létrehozásra: - nem kell copyzgatni, itt a függvény az egy függvény deklaráció,
+        // akkor lesz expression, ha a függvény elé tennék var .... = -t
+
+        function Person(firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.getName = function () { // ez a metódusa , egy proerty
+                console.log('Az én nevem: ' + this.firstName + ' ' + this.lastName);
+            };
+
+            this.setName = function (name) { // ez is metódus, de kap 2 paramétert
+                this.firstname = name.split('')[1];
+                this.lastname = name.split('')[0];
+            }
+        };
+
+        var person5 = new Person('Péter', 'Szarka', 18);
+        var person6 = new Person('Oliver', 'Kovats', 27);
+        console.log(person5);
+        console.log(person6);
+
+        // ez a function expressionnal való munka: - hoisting szempontából fel fogja emelni - a függvény törzse nem lesz felemelve, csak a változó
+        var Person2 = function (firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.getName = function () { // ez a metódusa , egy proerty
+                console.log('Az én nevem: ' + this.firstName + ' ' + this.lastName);
+            };
+
+            this.setName = function (name) { // ez is metódus, de kap 2 paramétert
+                this.firstname = name.split('')[1];
+                this.lastname = name.split('')[0];
+            }
+        };
+
+        */
+
+
+
+        // OOP - Objektum orientált programozási alapelvek:
+        // encapsulation - egységbe zárás 
+        // az összetartozó adatokat egy egységként kezeljük, egy egységbe zárva
+        // inheritance - öröklődés
+        // abstraction - absztrakció
+        // polymorphism - többalakúság
+
+        // Készíteni egy konstruktor függvényt:
+
+        function Hamburger(fantaziaNev, husFajtaja, sajTose, ar) {
+            this.fantaziaNev = fantaziaNev;
+            this.husFajtaja = husFajtaja;
+            this.cheese ? 'sajtos:'
+            'sajt nelkuli:' = sajTose; //Tenary option
+            this.ar = ar;
+            this.getDescription = function () {
+                console.log('Ez az' + this.fantaziaNev + this.husFajtaja + this.sajTose + 'hambi.' + 'Az ára: ' +
+                    this.ar)
+            }
+            this.setDescription = function (description) {
+                this.fantaziaNev = description.split('')[1];
+                this.husFajtaja = description.split('')[0];
+                this.sajTose = description.split('')[0];
+                this.ar = description.split('')[0];
+            }
+
+            console.log(getDescription);
+            console.log(Hamburger);
+            // példák:
+            // angus marhából legyen - sajtos - 1900 - zabálj meg
+            // szürkemarha - sajt nélküli - 1700 - humburger
+    </script>
+
+</body>
+
+</html>
