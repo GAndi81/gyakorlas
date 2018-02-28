@@ -28,6 +28,40 @@
         }
 
         test('szöeg');
+
+        function test2(param) {
+            try {
+                if (param % 2 != 0) {
+                    throw 'Ez nem osztható maradék nélkül 2-vel Bubsi';
+                }
+            } catch (e) {
+                console.log(e);
+            }
+        }
+
+        //test2(1);
+
+        function getNum() {
+            try {
+                var num = prompt('Ad meg egy számot egy és hat között');
+                if (num === '') {
+                    throw 'Bubuka adj már meg valamit';
+                }
+                if (!parseInt(num) && parseInt(num) != 0) {
+                    throw 'Bubuka szerinted ez szám?';
+                }
+                if (parseInt(num) < 1) {
+                    throw 'Tudod mi az hogy egynél nagyobb?';
+                }
+                if (parseInt(num) > 6) {
+                    throw 'Tudod mi az hogy hatnál kisebb?';
+                }
+            } catch (e) {
+                alert(e);
+                getNum();
+            }
+        }
+        getNum();
     </script>
 </body>
 
