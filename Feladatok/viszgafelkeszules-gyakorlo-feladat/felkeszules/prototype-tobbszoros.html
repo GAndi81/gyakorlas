@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Többszörös öröklődés</title>
+</head>
+
+<body>
+
+
+    <script>
+        function Animal(params) {
+            this.name = 'Animal';
+            this.toString = function () {
+                return `My name is  ${this.name}`;
+            };
+        }
+
+        function Canine() {
+            this.name = 'Canine';
+            this.sound = 'Canine sound';
+        }
+
+        function Wolf() {
+            this.name = 'Wolf';
+        }
+
+        //Prototype felülírása
+        Canine.prototype = new Animal();
+        Canine.prototype.constructor = Canine;
+
+        Wolf.prototype = new Canine();
+        Wolf.prototype.constructor = Wolf;
+
+        var articWolf = new Wolf();
+        console.log(articWolf.sound); // canin sound
+
+        Animal.prototype.sound = 'Grrrrrrrrr';
+        Animal.prototype.getSound = function () {
+            return `${this.name} says ${this.sound}`;
+        };
+
+        console.log(articWolf.getSound()); //Wolf says canin sound
+        console.log(articWolf);
+    </script>
+
+</body>
+
+</html>

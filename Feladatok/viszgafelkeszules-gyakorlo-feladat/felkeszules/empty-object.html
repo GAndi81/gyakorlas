@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Empty-obect</title>
+</head>
+
+<body>
+
+
+    <script>
+        var SampleObj = {
+            firstName: 'Levi',
+            surName: 'Toth',
+            counter: 0,
+            increase: function () {
+                this.counter++;
+            }
+        };
+
+
+        var sampleCreatedObj = Object.create(SampleObj, {
+            firstName: { // vagy value, writable vagy get-set,
+                value: "TestName",
+                enumerable: true, // ha ez false, akkor nem fogja kiírni - nem jelenik meg a listában
+                writable: true, // ha ez false, akkor ez a property read only lesz, de ugyanugy fog latszani
+                configurable: true //ha ez false, akkor nem fogom tudni törölni
+                // ezek mind a descriptorok
+            }
+        });
+
+        // hasOwnProperty megadja
+        console.log(sampleCreatedObj);
+        for (var prop in sampleCreatedObj) {
+            if (sampleCreatedObj.hasOwnProperty(prop)) {
+                console.log(prop);
+            }
+        }
+
+        sampleCreatedObj.firstName = 'Modified Name';
+        delete sampleCreatedObj.firstName;
+        console.log(sampleCreatedObj.firstName);
+    </script>
+</body>
+
+</html>
