@@ -29,6 +29,11 @@
              }
          }
 
+         // test tuladonságot megadhatok neki, és deletet is használhatok hozzá
+
+         // delete person1.firstName;
+         console.log(person1);
+
          var person2 = {
              firstName: 'Oliver',
              lastName: 'Kovats',
@@ -134,7 +139,7 @@
 
         // Készíteni egy konstruktor függvényt:
 
-        function Hamburger(fantaziaNev, husFajtaja, sajTose, ar) {
+        /*function Hamburger(fantaziaNev, husFajtaja, sajTose, ar) {
             this.fantaziaNev = fantaziaNev;
             this.husFajtaja = husFajtaja;
             this.cheese ? 'sajtos:'
@@ -156,6 +161,44 @@
             // példák:
             // angus marhából legyen - sajtos - 1900 - zabálj meg
             // szürkemarha - sajt nélküli - 1700 - humburger
+            */
+        arr.customText = 'Ezt én véstem ide';
+        console.log(arr.customText);
+        arr2 = [1, 2, 3];
+        console.log(arr2.customText);
+
+        var s = 'EZ egy szöveg';
+        s.customText = 'Ezt én véstem ide';
+        console.log(s.customText);
+
+        var s2 = new String('alma');
+        s2.customText = 'Ezt én véstem ide';
+        console.log(s2.customText);
+
+        arr.length = 1;
+        console.log(arr);
+        arr.length = 3;
+        console.log(arr);
+
+        console.log(s.length);
+        s.length = 3;
+        console.log(s.length);
+
+        s2.length = 1;
+        console.log(s2);
+
+        var nodeList = document.body.childNodes;
+        console.log(nodeList);
+        nodeList.length = 3;
+        console.log(nodeList);
+
+
+
+
+        // tömbnél megtehetjük, hogy a hosszát megadjuk, stringnél nem tudjuk az adott betűkarakter hosszát megadni!
+
+        var arr = [1, 2, 3];
+        /*
     </script>
 
 </body>
