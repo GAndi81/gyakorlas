@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>San-Franc</title>
+</head>
+
+<body>
+
+    <script>
+        var fruits1 = ['apple', 'banana', 'grape'];
+        var fruits2 = fruits1;
+
+        fruits2[2] = 'ananas';
+
+        alert(fruits1);
+
+
+        function censor(text, toChange, newWord) {
+            var toReturn = text;
+            while (toReturn.includes(toChange)) {
+                toReturn = toReturn.replace(toChange, newWord);
+            }
+            return toReturn;
+        }
+
+        var result = censor('A kutya nagyon aranyos kutya', 'kutya', 'macska');
+
+        alert(result);
+
+
+        function listaz(lista) {
+            var vissza = '';
+            for (var i = 0; i < lista.length; i++) {
+                vissza = vissza + (i + 1) + '. ' + lista[i] + '\n';
+            };
+            return vissza;
+        }
+
+        var osztaly = ['Laci', 'Gyula', 'Gabi', 'Panni'];
+
+        alert(listaz(osztaly));
+
+
+
+
+        function listaz2(lista2) {
+            var vissza2 = '';
+            for (var i = 0; i < lista2.length; i++) {
+                vissza2 = vissza2 + (i + 1) + '. ' + lista2[i] + '\n';
+            };
+            return vissza2;
+        }
+
+        var osztaly2 = ['Anna', 'Alma', 'Petya', 'Zsigi'];
+
+        alert(listaz2(osztaly2));
+
+        //osszegzes tetele
+        var szamok = [1, 3, 5, 7, 9, 11];
+
+        var osszeg = 0;
+
+        for (var i = 0; i < szamok.length; i++) {
+            osszeg = osszeg + szamok[i];
+        }
+
+        alert(osszeg);
+
+        //megszámolás tétele
+
+        var tomb = [1, 3, 6, 8, 14, 22];
+        var szamlalo = 0;
+        var vizsgalt = 6;
+
+        for (var i = 0; i < tomb.length; i++)
+            if (tomb[i] > vizsgalt)
+                szamlalo++;
+
+        alert(szamlalo);
+
+        // eldöntés tétele
+
+        var tomb = [1, 4, 6, 8, 9];
+        var keresendo = 9;
+        var i = 0;
+
+        while (i < tomb.length && tomb[i] != keresendo)
+            i++;
+
+        if (i < tomb.length) {
+            alert('Megtaláltam!');
+        } else
+            alert('Nincs találat!');
+
+
+        // kiválasztás tétele
+
+        var tomb = [2, 6, 34, 67, 89];
+        var keresett = 67;
+        var i = 0;
+
+        while (tomb[i] != keresett && i < tomb.length)
+            i++;
+
+        var talalat = i + 1;
+
+        alert(talalat);
+
+        // keresés tétele
+
+        var tomb = [2, 6, 34, 67, 89];
+        var keresett = 89;
+        var i = 0;
+
+        while (i < tomb.length && tomb[i] != keresett)
+            i++
+            if (i < tomb.length)
+                alert('Van találat, ami az ' + (i + 1) + '. elem.');
+            else
+                alert('Nincs találat');
+
+        // kiválogatás tétele
+
+        var tomb = [1, 3, 6, 8, 34];
+        var meret = tomb.length;
+        var ujTomb = [];
+        var j = 0;
+
+        for (var i = 0; i < meret; i++)
+            if (tomb[i] > 6)
+                ujTomb[j++] = tomb[i];
+
+        var ujTombMeret = j;
+
+        //Ellenorzes:
+
+        for (var i = 0; i < meret; i++)
+            //alert(tomb[i]);
+
+            for (var i = 0; i < ujTombMeret; i++)
+                //alert(ujTomb[i]);
+
+                alert((tomb[i] + '\n' + (ujTomb[i])));
+
+        // Szétválogatás:
+
+        var tomb = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var meret = tomb.length();
+
+        var tomb2 = [];
+        var tomb3 = [];
+
+        var j = 0;
+        var k = 0;
+
+        if (var i = 0; i < meret; i++)
+            if (tomb[i] < 5)
+                tomb2[j++] = tomb[i];
+            else
+                tomb3[k++] = tomb[i];
+
+        //MIn kiválasztás
+
+        tomb = [3, 5, 8, 2, 9];
+        var meret = tomb.length;
+        var min = tomb[0];
+
+        for (var i = 0; i < meret; i++) {
+            if (tomb[i] < min) {
+                min = tomb[i];
+            }
+        }
+        alert(min);
+
+        //Max kiválasztás:
+        tomb = [3, 5, 8, 9, 2];
+        var meret = tomb.length;
+        var max = tomb[0];
+
+        for (var i = 0; i < meret; i++) {
+            if (tomb[i] > max) {
+                max = tomb[i];
+            }
+        }
+        alert(max);
+
+        //Metszet tétele:
+
+        var tomb = [2, 5, 3, 7, 4, 8];
+        var meret = tomb.length;
+        var tomb2 = [7, 4, 9, 10, 3, 2];
+        var meret2 = tomb2.length;
+
+        var metszetTomb = [];
+        var k = 0;
+        var j;
+
+        for (var i = 0; i < meret; i++) {
+            j = 0;
+            while (j < meret2 && tomb2[j] != tomb[i])
+                j++;
+
+            if (j < meret2)
+                metszetTomb[k++] = tomb[i];
+
+        }
+
+        // Unió tétele: a leckében van, San Francisco
+    </script>
+</body>
+
+</html>
