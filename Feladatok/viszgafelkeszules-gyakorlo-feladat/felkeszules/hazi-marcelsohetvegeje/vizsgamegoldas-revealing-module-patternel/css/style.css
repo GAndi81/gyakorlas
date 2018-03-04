@@ -65,7 +65,7 @@ h1 {
 }
 
 .small-div:hover .small-image {
-    /*div felett az egér, benne lévő kép tulajdonságát fogja változtatni*/
+ 
     box-shadow: 0 0 20px 15px snow
 }
 
@@ -75,7 +75,7 @@ h1 {
 }
 
 .small-div:hover p {
-    /*div felett az egér, benne lévő p tulajdonságát fogja változtatni*/
+
     font-weight: bold;
     text-shadow: 1px 1px 5px snow
 }
