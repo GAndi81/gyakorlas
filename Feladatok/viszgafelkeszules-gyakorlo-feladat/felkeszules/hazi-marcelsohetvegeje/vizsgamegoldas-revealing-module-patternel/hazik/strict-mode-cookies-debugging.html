@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Strict-mode-cookies-debugging</title>
+</head>
+
+<body>
+
+
+    <script>
+        // strict mode
+
+        /*The "use strict" directive is new in JavaScript 1.8.5 (ECMAScript version 5).
+
+        It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
+
+        The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
+
+        With strict mode, you can not, for example, use undeclared variables.
+
+        Strict mode is supported in:
+        IE from version 10. Firefox from version 4.
+        Chrome from version 13. Safari from version 5.1.
+        Opera from version 12.
+
+        Declaration: "use strict"; vagy function strict()/notStrict()
+
+        Strict mode makes it easier to write "secure" JavaScript.
+
+        // cookies
+
+        Cookies let you store user information in web pages.
+        Cookies are data, stored in small text files, on your computer.
+
+        When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user.
+
+        Cookies were invented to solve the problem "how to remember information about the user":
+
+        When a user visits a web page, his name can be stored in a cookie.
+        Next time the user visits the page, the cookie "remembers" his name.
+
+
+        Creation/ Deletion: 
+        document.cookie = "username=John Doe"; 
+
+        // a piece of text file which is saved into the users computer - each browser has a different cookpie type, those can't be seen by one another
+        // technical data and text file based on domain
+        // 3rd party cookies - those are created by other sites as owners of the content of diff img, adds
+        // 1st party cookies - this is created by the site I visited
+
+        // miért? megjegyzi az adataidat, emlékszik Rád, relevant infót küld,  
+
+        // Delete, clear all cookies, Delete specific cookies - from a site, for a period of time
+
+
+        // debugging in Chrome and in JSCode
+
+        Chrome Dev Tools - 
+
+        //1. Finding a series of actions that consistently reproduces a bug is always the first step to debugging.
+        2. start to debugging in sources tab, 
+        3. 3 része van - File Navigator / Code Editor / JAvascript debugging pane
+        4. Pause the code with a breakpoint - event listener breakpoints
+        5. Step thorught the code
+        6. set a line-of-code breakpoint
+        7. check variable values
+        8. apply a fix
+
+
+        VS COde Debugger:
+
+        Debug icon - 
+
+
+        // difference among func and proc prog.
+
+        Peti Ciprián előadásban van
+    </script>
+</body>
+
+</html>
