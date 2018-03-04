@@ -12,7 +12,13 @@
 
 
     <script>
-        var bankSzamlaszam = [];
+
+        function checkBankSzamlaszam(bankszamlaszam) {
+
+            var regExp = /^\d{8} \d{8} \d{8}$/;
+            // 3x 8 szamsorozat, szammal kell kezdodnie, 0-9, az utolsó 8 karakter default nulla lesz, ha üres az input mező
+        }
+        
         var szemSzam = [];
         var szemIgSzam = [];
         var adoszam = [];
