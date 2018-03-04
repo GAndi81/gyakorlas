@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RegEpx-hazi</title>
+</head>
+
+<body>
+
+
+    <script>
+        var szemAdat = (function () {
+
+            var checkBankSzamlaszam = function (bankszamlaszam) {
+
+                var regExpBankSzamlaszam = /^\d{8} \d{8} \d{8}$/i;
+                // 3x8 elemű számsorozat, szammal kell kezdodnie, 0-9, az utolsó 8 karakter default nulla lesz, ha üres az input mező
+                return checkBankSzamlaszam.test(bankszamlaszam);
+            }
+
+            var checkSzemSzam = function (szemszam) {
+
+                var regExpSZemSZam = /^\d{0,1,2,3} \d{6} \d{4}$/i;
+                // X - XXXXXX - XXXX
+                //nem(1: fiú, 2: lány, 3: 2000 után született fiú, 4: 2000 után született lány) -
+                //születési dátum -
+                //egy random generált szám
+                return regExpSZemSZam.test(szemszam);
+            }
+
+            var szemIgSzam = function (szemigszam) {
+
+                var regExpSzemIgSzam = /^\d{a} \d{6}$/i;
+                /*Személyi igazolvány szám elfogadott formátumai:
+                2 betű + szóköz + 6 számjegy, pl.: AE 232323
+                2 betű + kötőjel + római szám + szóköz + 6 számjegy, pl.: AU - I 123456
+
+                Személyazonosító igazolvány(kártya) elfogadott formátumai:
+                    6 számjegy + 2 betű, pl.: 123456 AA
+
+                egy lehetséges algoritmus:
+
+                    public Function isSzigSz(strSzigsz as string) as boolean
+                If _
+                strSzigsz Like "######??"
+                Or _
+                strSzigsz Like "??-?######"
+                Or _
+                strSzigsz Like "??######"
+                _
+                Then
+                isSzigSz = True
+                End If
+                end Function*/
+                return regExpSzemIgSzam.test(szemigszam);
+            }
+
+            var adoszam = function (adoszam) {
+
+                var regExpadoSzam = /^\d{3} \d{3} \d{3}$/i;
+                // 3x3 számból álló számsorozat, 0-9ig
+                return regExpadoSzam.test(adoszam);
+            }
+
+
+            var eMail = function (email) {
+
+                var regExpeMail = /\S+@\S+/i;
+                //official standard is RFC 2822 - 
+                return regExpeMail.test(email);
+            }
+        })();
+
+        /*
+        pl. var s = '452 856 365' --> 
+        ezt a számot az alábbi reguláris kifejezéssel lehet leírni: 
+        var r = /^\d{3} \d{3} \d{3}$/;
+        --> ^\d --> ez azt jelenti, h. számmal kell kezdődnie, 
+        utána a {3} --> azt jelenti, h. csak számot tartalmazhat, 
+        a végén a $ --> azt jelenti, h. 3jegyű számmal végződhet*/
+    </script>
+</body>
+
+</html>
