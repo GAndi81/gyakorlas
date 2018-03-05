@@ -1,20 +1,113 @@
 {
-    "movies": [
+    "title": "Get out",
+    "timeInMinutes": 104,
+    "premierYear": 2017,
+    "categories": ["Horror", "Mystery", "Thriller"],
+    "directors": ["Jordan Peele"],
+    "cast": [{
+            "name": "Daniel Kaluuya",
+            "characterName": "Chris Washington",
+            "birthCountry": "UK",
+            "birthCity": "London",
+            "birthYear": 1989
+        },
         {
-            "title":
-            "timeInMinutes":
-            "premierYear":
-            "categories": [],
-            "directors":['', '', ''],
-            "cast":[
-                {
-                    "name":
-                    "characterName":
-                    "birthCountry":
-                    "birthCity":
-                    "birthYear":
-                }
-            ]
+            "name": "Allison Williams",
+            "characterName": "Rose Armitage",
+            "birthCountry": "US",
+            "birthCity": "New Canaan",
+            "birthYear": 1988
+        }
+    ]
+}, {
+    "title": "Three Billboards Outside Ebbing-Missouri",
+    "timeInMinutes": 115,
+    "premierYear": 2017,
+    "categories": ["Crime", "Drama"],
+    "directors": ["Martin McDonagh"],
+    "cast": [{
+            "name": "Frances McDormand",
+            "characterName": "Mildred Hayes",
+            "birthCountry": "US",
+            "birthCity": "Chicago",
+            "birthYear": 1957
+        },
+        {
+            "name": "Sam Rockwell",
+            "characterName": "Jason Dixon",
+            "birthCountry": "US",
+            "birthCity": "Daly City",
+            "birthYear": "1968"
+        },
+        {
+            "name": "Woody Harrelson",
+            "characterName": "Bill Willoughby",
+            "birthCountry": "US",
+            "birthCity": "Midland",
+            "birthYear": "1961"
+        }
+    ]
+}, {
+    "title": "American Made",
+    "timeInMinutes": "115",
+    "premierYear": "2017",
+    "categories": ["Action", "Biography", "Comedy"],
+    "directors": ["Doug Liman"],
+    "cast": [{
+            "name": "Tom Cruise",
+            "characterName": "Barry Seal",
+            "birthCountry": "US",
+            "birthCity": "Syracuse",
+            "birthYear": "1962"
+        },
+        {
+            "name": "Sarah Wright",
+            "characterName": "Lucy Seal",
+            "birthCountry": "US",
+            "birthCity": "Louisville",
+            "birthYear": "1983"
+        }
+    ]
+}, {
+    "title": "Baby Driver",
+    "timeInMinutes": "112",
+    "premierYear": "2017",
+    "categories": ["Action", "Crime", "Music"],
+    "directors": ["Edgar Wright"],
+    "cast": [{
+            "name": "Ansel Elgort",
+            "characterName": "Baby",
+            "birthCountry": "US",
+            "birthCity": "New York",
+            "birthYear": "1994"
+        },
+        {
+            "name": "Lily James",
+            "characterName": "Deborah",
+            "birthCountry": "UK",
+            "birthCity": "Esher",
+            "birthYear": "1989"
+        }
+    ]
+}, {
+    "title": "Pulp Fiction",
+    "timeInMinutes": "154",
+    "premierYear": "1994",
+    "categories": ["Crime", "Drama"],
+    "directors": ["Quentin Tarantino"],
+    "cast": [{
+            "name": "John Travolta",
+            "characterName": "Vincent Vega",
+            "birthCountry": "US",
+            "birthCity": "Englewood",
+            "birthYear": "1954"
+        },
+        {
+            "name": "Uma Thurman",
+            "characterName": "Mia Wallace",
+            "birthCountry": "UK",
+            "birthCity": "Boston",
+            "birthYear": "1970"
         }
     ]
 }

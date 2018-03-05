@@ -1,4 +1,4 @@
----------EZ a HF_hez kell:
+
 
 var newtitle = '';
 
@@ -14,9 +14,6 @@ for (let i = 0; i < title.length; i++){
     }
 }
 
-
-------------------------
-EZ kell a leckéhez:
 
 let title = 'Apád vagy, .... Anyád?';
 function removeShits(str){
