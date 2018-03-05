@@ -1,0 +1,20 @@
+{
+    "movies": [
+        {
+            "title":
+            "timeInMinutes":
+            "premierYear":
+            "categories": [],
+            "directors":['', '', ''],
+            "cast":[
+                {
+                    "name":
+                    "characterName":
+                    "birthCountry":
+                    "birthCity":
+                    "birthYear":
+                }
+            ]
+        }
+    ]
+}
