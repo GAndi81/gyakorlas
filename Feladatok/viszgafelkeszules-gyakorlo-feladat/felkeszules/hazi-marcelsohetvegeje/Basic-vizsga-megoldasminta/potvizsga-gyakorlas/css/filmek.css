@@ -1,0 +1,17 @@
+body,
+main {
+    font-family: 'Eczar', serif;
+    margin: 0;
+    padding: 0;
+    width: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(/img/background/shooting.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+img {
+    filter: grayscale;
+}
