@@ -105,11 +105,20 @@ ARR.forEach((el, i) => {
     console.log(i, el * 2)
 });
 
+//Funkcionálisan
+
 let newTomb = [];
 ARR.forEach(el => newTomb.push(el * 2));
 
-let newTomb2 = ARR.map(el => el * 2);
+let newTomb2 = ARR.map(el => el * 2)
+    .filter(el => el > 9)
+    .reduce((total, el) => total + el);
 
-//let newTomb3 = ARR.map(el => el * 2 <= 10);
+//procedurálisan
 
-let newTomb4 = ARR.reduce((el, i) => el + i)
+let ossz = 0;
+for (let i = 0; i < ARR.length; i++) {
+    if (ARR[i] * 2 > 9) {
+        ossz += ARR[i] * 2;
+    }
+}
