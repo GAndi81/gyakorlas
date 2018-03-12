@@ -67,3 +67,49 @@ let teacher2 = new Teacher('Pali', 'Hajas', 27, false);
 // ezeket megnézni a neten
 //https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS - ezt elolvasni otthon
 
+
+//v.1
+function commonFn(x) {
+    return x * 2;
+}
+let double = commonFn(10);
+
+//v.2
+
+let double2 = (function (x) {
+    return x * 2;
+})(10);
+// ez egy iife - 
+
+// v.3 the BEST
+
+let double3 = x => x * 2;
+// ha egy paraméter van, akkor nem kell kitenni a zárójeleket,
+//ha egyszeri utasítás van nem kell kitenni a kapcsosokat és a zárójeleket
+
+let summarize = (a, b) => a * b;
+
+const ARR = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+
+/*ARR.forEach(function (el) {
+    return el * 2;
+});*/
+
+ARR.forEach(el => {
+    console.log(el * 2)
+});
+// ezek változhatnak -
+
+ARR.forEach((el, i) => {
+    console.log(i, el * 2)
+});
+
+let newTomb = [];
+ARR.forEach(el => newTomb.push(el * 2));
+
+let newTomb2 = ARR.map(el => el * 2);
+
+//let newTomb3 = ARR.map(el => el * 2 <= 10);
+
+let newTomb4 = ARR.reduce((el, i) => el + i)
