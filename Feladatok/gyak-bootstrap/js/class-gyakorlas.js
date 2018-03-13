@@ -32,19 +32,19 @@ class Items {
 
     // fapados megoldás - 
     update(item) {
-        if (this.checkItemIfExist(id)) {
+        if (this.checkItemIfExist(item.id)) {
             for (let i = 0; i < this.items.length; i++) {
                 if (this.items[i].id == item.id) {
                     this.items[i] = item;
                     break;
                 }
             }
+            this.save();
         }
-        this.save();
     }
 
 
-    delete() {
+    delete(id) {
         if (this.checkItemIfExist(id)) {
             this.items = this.items.filter(el => el.id != id);
             save();
